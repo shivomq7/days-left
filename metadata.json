@@ -1,0 +1,6 @@
+{
+  "name": "Days Left",
+  "description": "A reverse lifespan countdown displaying your remaining days to inspire intentional living, with meaningful youth and wisdom milestones.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
