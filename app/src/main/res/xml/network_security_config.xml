@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Domain-specific security policies -->
+    <domain-config cleartextTrafficPermitted="false">
+        <!-- Google Gemini API -->
+        <domain includeSubdomains="true">generativelanguage.googleapis.com</domain>
+        <pin-set expiration="2025-12-31">
+            <!-- Certificate pins for enhanced security -->
+            <pin digest="SHA-256">Xs2lEFf2DvSSohs7M00NRcaGS0W+qLAstcc339SNsWc=</pin>
+            <pin digest="SHA-256">jQJTbIh0grw4+4FQkqqyNWjTIDGrVyakXlybPbisPnE=</pin>
+        </pin-set>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+    
+    <!-- Default policy for all other domains -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">.</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
